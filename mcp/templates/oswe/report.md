@@ -64,11 +64,11 @@ Toda análise de código fonte foi feita nos hosts "Debug".
 
 Para análise do host "ABCD", foi utilizado a ferramenta "jd-gui", ja presente no host debug. O acesso foi feito utilizando o protocolo RDP.
 
-![jd-gui on debug machine](<Imagens-notion/image 35.png>)
+
 
 Para análise do host "EFGH", foi utilizada a ferramenta "VS-Code", implantando no host debug. O acesso foi feito utilizando os protocolos SSh(Analise do banco de dados) e HTTP(VS Code).
 
-![Remote VSCode on debug machine](<Imagens-notion/image 111.png>)
+
 
 \newpage
 
@@ -76,7 +76,7 @@ Para análise do host "EFGH", foi utilizada a ferramenta "VS-Code", implantando 
 
 ## Screenshot from Exam Painel with Local.txt and Proof.txt
 
-![Putting flags on Exam Painel](<Imagens-notion/image 183.png>)
+
 
 ## Target - ABCD Web Server
 
@@ -91,24 +91,24 @@ Segue abaixo as strings de cada arquivo solicitado:
 Vulnerabilidade classificada na CWE-2XXXX84.
 Verificado no momento em que.......
 
-![Code Review](<Imagens-notion/image 72.png>)
+
 
 ### Vulnerabilidade 2 - NOME DA VULNERABILIDADE
 
 Vulnerabilidade classificada na CWE-2XXXX84.
 Verificado no momento em que.......
 
-![Code Review](<Imagens-notion/image 72.png>)
+
 
 ### Steps
 
 Com base na metodologia Top-down, foi iniciado a exploracao do alvo a partir da pagina web, avaliando funcoes nao autenticadas, area de login, criacao de usuario, recuperacao de senha e funcoes com usuario nao autenticado.
 
-![ABCD front page](<Imagens-notion/image 1.png>)
+
 
 Verificando especificamente a funcao boraBILL, vemos que ela faz download usando Files.readAllBytes.
 
-![boraBILL function](<Imagens-notion/image 66.png>)
+
 
 ### PoC Code
 
@@ -129,15 +129,15 @@ print("Hello Avocado!")
 
 Segue abaixo o screenshot do retorno do script.
 
-![scriptABCD.py execution](<Imagens-notion/image 98.png>)
+
 
 Segue abaixo o screenshot de captura da Local.txt
 
-![Capture of local.txt](<Imagens-notion/image 92.png>)
+
 
 Segue abaixo o screenshot de captura da Proof.txt
 
-![Capture of proof.txt](<Imagens-notion/image 94.png>)
+
 
 \newpage
 
@@ -154,24 +154,24 @@ Segue abaixo as strings de cada arquivo solicitado:
 Vulnerabilidade classificada na CWE-2XXXX84.
 Verificado no momento em que.......
 
-![Code Review](<Imagens-notion/image 72.png>)
+
 
 ### Vulnerabilidade 2 - NOME DA VULNERABILIDADE
 
 Vulnerabilidade classificada na CWE-2XXXX84.
 Verificado no momento em que.......
 
-![Code Review](<Imagens-notion/image 72.png>)
+
 
 ### Steps
 
 Com base na metodologia Top-down, foi iniciado a exploracao do alvo a partir da pagina web, avaliando funcoes nao autenticadas, area de login, criacao de usuario, recuperacao de senha e funcoes com usuario nao autenticado.
 
-![ABCD front page](<Imagens-notion/image 1.png>)
+
 
 Verificando especificamente a funcao boraBILL, vemos que ela faz download usando Files.readAllBytes.
 
-![boraBILL function](<Imagens-notion/image 66.png>)
+
 
 ### PoC Code
 
@@ -192,15 +192,15 @@ print("Hello Avocado!")
 
 Segue abaixo o screenshot do retorno do script.
 
-![scriptEFGH.py execution](<Imagens-notion/image 98.png>)
+
 
 Segue abaixo o screenshot de captura da Local.txt
 
-![Capture of local.txt](<Imagens-notion/image 92.png>)
+
 
 Segue abaixo o screenshot de captura da Proof.txt
 
-![Capture of proof.txt](<Imagens-notion/image 94.png>)
+
 
 ### Additional Items Not Mentioned in the Report
 

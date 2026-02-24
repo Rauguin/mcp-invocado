@@ -147,32 +147,22 @@ MCP_Invocado/
 
 ```bash
 mcp init --template oswe --output report.md
-```
 
-```bash
 Validate input
 mcp check report.md
-```
 
-```bash
 Render without translation
 mcp render report.md
-```
 
-```bash
 Render ZIP export (Notion)
 mcp render export.zip
-```
 
-```bash
 Render with translation using OpenAI API
 mcp render report.md \
   --engine openai \
   --openai-api-key YOUR_API_KEY \
   --lang en
-```
 
-```bash
 Render with local LLaMA model
 mcp render report.md \
   --engine llama \
@@ -272,13 +262,13 @@ docker run --rm -v "$PWD:/work" -w /work \
 
 Docker is recommended for:
 
-Clean execution environments
+- Clean execution environments
 
-CI/CD usage
+- CI/CD usage
 
-Reproducible builds
+- Reproducible builds
 
-Avoiding local Pandoc/LaTeX dependency issues
+- Avoiding local Pandoc/LaTeX dependency issues
 
 ---
 
