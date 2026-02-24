@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-invocado"
+version = "0.1.0"
+description = "CLI tool to transform Markdown pentest reports into OffSec-style PDFs using Pandoc + LaTeX, with optional AI translation."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+openai = ["openai>=1.0.0"]
+llama = ["llama-cpp-python>=0.2.0"]
+
+[project.scripts]
+mcp = "mcp.cli:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mcp*"]
+
+[tool.setuptools.package-data]
+mcp = [
+  "templates/**/*.md",
+  "templates/**/*.latex",
+  "templates/images/*",
+]

@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+*.pdf
+.mcp_extract_*/
+.mcp_render.md
+.env
+.venv/
+venv/
+dist/
+build/
+*.egg-info/
+.DB_Store
+Thumbs.db
+
