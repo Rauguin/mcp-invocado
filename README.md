@@ -280,6 +280,20 @@ Docker is recommended for:
 
 ---
 
+## 🏁 Tutorial
+
+- [Step 1 — Installation & Virtual Environment](https://youtu.be/vzKBGcIxgMs)
+
+- [Step 2 — Project Initialization](https://youtu.be/O_RJUeniy6E)
+
+- [Step 3 — Rendering PDF](https://youtu.be/292bN8lPqkM)
+
+- [Step 4 — VSCode Workflow](https://youtu.be/g4EUprHOZeY)
+
+- [Step 5 — OpenAI Translation](https://youtu.be/xcoCjhuo3As)
+
+---
+
 ## 🏁 Status
 
 This project is under active development as part of an OffSec MCP community challenge.
