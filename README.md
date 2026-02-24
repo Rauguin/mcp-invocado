@@ -272,6 +272,14 @@ Docker is recommended for:
 
 ---
 
+## 🏁 Deps
+
+- pandoc
+
+- texlive-xeter
+
+---
+
 ## 🏁 Status
 
 This project is under active development as part of an OffSec MCP community challenge.
