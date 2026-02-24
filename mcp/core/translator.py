@@ -10,10 +10,33 @@ def translate_markdown(
 ) -> str:
     if engine == "none":
         return markdown_text
+
     if engine == "openai":
-        return _translate_openai(markdown_text, target_language)
+        try:
+            import openai  # noqa: F401
+        except ModuleNotFoundError:
+            print("[-] Missing dependency: openai. Install: pip install openai")
+            return markdown_text
+
+        try:
+            return _translate_openai(markdown_text, target_language)
+        except Exception as e:
+            print(f"[-] OpenAI translation failed: {e}")
+            return markdown_text
+
     if engine == "llama":
-        return _translate_llama(markdown_text, target_language)
+        try:
+            import llama_cpp  # noqa: F401
+        except ModuleNotFoundError:
+            print("[-] Missing dependency: llama-cpp-python. Install: pip install llama-cpp-python")
+            return markdown_text
+
+        try:
+            return _translate_llama(markdown_text, target_language)
+        except Exception as e:
+            print(f"[-] Llama translation failed: {e}")
+            return markdown_text
+
     raise ValueError(f"Unknown translation engine: {engine}")
 
 def _translate_openai(text: str, lang: str) -> str:

@@ -20,10 +20,24 @@ def render_markdown(
         "--number-sections",
     ]
     print("[...] Rendering PDF with pandoc...")
-    result = subprocess.run(
-        cmd,
-        cwd=str(input_md.parent)
-    )
+    try:
+        subprocess.run(["pandoc", "--version"], capture_output=True, text=True)
+    except FileNotFoundError:
+        print("[-] 'pandoc' not found in PATH. Install: sudo apt install pandoc")
+        return False
+    try:
+        subprocess.run(["xelatex", "--version"], capture_output=True, text=True)
+    except FileNotFoundError:
+        print("[-] 'xelatex' not found in PATH. Install: sudo apt install texlive-xetex")
+        return False
+    try:
+        result = subprocess.run(cmd, cwd=str(input_md.parent))
+    except FileNotFoundError as e:
+        print(f"[-] Failed to execute: {e}")
+        return False
+    except Exception as e:
+        print(f"[-] Unexpected error while rendering: {e}")
+        return False
     if result.returncode != 0:
         print("[-] Pandoc rendering failed.")
         return False
