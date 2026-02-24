@@ -1,2 +1,5 @@
 openai>=1.0.0
 llama-cpp-python>=0.2.0
+
+#Also needs pandoc and texlive-xetex.
+#For that one, you can use apt install
